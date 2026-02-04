@@ -3,36 +3,36 @@ const projects = [
     case: "1",
     title: "Marketing Analysis Business Case",
     link: "https://app.powerbi.com/groups/me/reports/b14b5071-93a0-4753-8c62-656c47b7117d/d4b237e09bcad0738366?experience=power-bi",
-    titleImg:"/src/components/projects/assets/Screenshot 2026-01-26 213506.png",
+    titleImg:"/src/components/projects/assets/conversion.png",
     github: "https://www.linkedin.com/feed/update/urn:li:activity:7421614402006614016/",
     image:
-      "/src/components/projects/assets/Screenshot 2026-01-26 213444.png",
+      "/src/components/projects/assets/customerreview.png",
     text: "This project focuses on improving customer engagement, conversion rates, and satisfaction through data-driven analysis. By examining website traffic, marketing content performance, and customer feedback, key challenges such as declining interactions, low conversions, and underperforming campaigns were identified. Targeted strategies were implemented, including optimizing high-performing products, revitalizing content, and addressing customer concerns, resulting in actionable insights to enhance overall business performance and drive measurable growth.",
     stacks: [
       {
         image:
-         "/src/components/projects/assets/—Pngtree—microsoft excel icon vector_3588803.png",
+         "/src/components/projects/assets/excel.png",
         text: "Excel",
       },
       {
         text: "PowerBI",
-        image:"/src/components/projects/assets/Power-BI-Detail-Page.png"
+        image:"/src/components/projects/assets/powerbi.png"
          ,
       },
       {
         text: "SQL(Sqlserver)",
         image:
-          "/src/components/projects/assets/74d33678bb91045843da44bdab726e66.png",
+          "/src/components/projects/assets/sql.png",
       },
       {
         text: "Python",
         image:
-          "/src/components/projects/assets/[CITYPNG.COM]HD Python Logo Symbol Transparent PNG - 2000x2000.png",
+          "/src/components/projects/assets/python.png",
       },
       {
         text: "Figma",
         image:
-          "/src/components/projects/assets/pngwing.com.png",
+          "/src/components/projects/assets/pngwing.png",
       },
    
     ],
@@ -65,20 +65,20 @@ const projects = [
     
     gallery: [
       {
-        src:"/src/components/projects/assets/Screenshot 2026-01-26 213444.png",
+        src:"/src/components/projects/assets/overview.png",
         title: "Overview",
       },
       {
-        src:"/src/components/projects/assets/Screenshot 2026-01-26 213506.png",
+        src:"/src/components/projects/assets/conversion.png",
         title:
           "Conversion DetailsS",
       },
       {
-       src:"/src/components/projects/assets/Screenshot 2026-01-26 213532.png",
+       src:"/src/components/projects/assets/socilamedia.png",
         title: "Social Media Details",
       },
       {
-        src:"/src/components/projects/assets/Screenshot 2026-01-26 213555.png",
+        src:"/src/components/projects/assets/customerreview.png",
         title: "Customer Review Details",
       }
     ],

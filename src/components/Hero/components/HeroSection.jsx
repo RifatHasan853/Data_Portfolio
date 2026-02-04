@@ -149,7 +149,7 @@ const HeroSection = () => {
 
         <div>
           <img
-            src="/src/components/Hero/assets/data analytics.jpg"
+            src="/src/components/Hero/assets/hero.jpg"
             className="z-40 w-[80%] md:w-[550px] floating-image "
             alt=""
           />

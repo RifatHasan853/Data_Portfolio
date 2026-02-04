@@ -14,7 +14,7 @@ const About = () => {
       >
         <div className=" w-2/4 animate__animated animate__fadeInUp">
           <motion.img
-            src="/src/assets/WhatsApp Image 2026-01-30 at 8.13.25 AM.jpeg"
+            src="/src/assets/profile.jpeg"
             className="w-[450px] 2xl:w-[80%] rounded-full mx-auto"
             alt=""
             initial={{ opacity: 0 }}
