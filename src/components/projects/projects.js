@@ -1,38 +1,44 @@
+import conversion from "./assets/conversion.png";
+import customerReview from "./assets/customerreview.png";
+import excel from "./assets/excel.png";
+import powerbi from "./assets/powerbi.png";
+import sql from "./assets/sql.png";
+import python from "./assets/python.png";
+import figma from "./assets/pngwing.png";
+
+import overview from "./assets/overview.png";
+import socialMedia from "./assets/socilamedia.png";
+
 const projects = [
   {
     case: "1",
     title: "Marketing Analysis Business Case",
     link: "https://app.powerbi.com/groups/me/reports/b14b5071-93a0-4753-8c62-656c47b7117d/d4b237e09bcad0738366?experience=power-bi",
-    titleImg:"/src/components/projects/assets/conversion.png",
+    titleImg: customerReview,
     github: "https://www.linkedin.com/feed/update/urn:li:activity:7421614402006614016/",
     image:
-      "/src/components/projects/assets/customerreview.png",
+      customerReview,
     text: "This project focuses on improving customer engagement, conversion rates, and satisfaction through data-driven analysis. By examining website traffic, marketing content performance, and customer feedback, key challenges such as declining interactions, low conversions, and underperforming campaigns were identified. Targeted strategies were implemented, including optimizing high-performing products, revitalizing content, and addressing customer concerns, resulting in actionable insights to enhance overall business performance and drive measurable growth.",
     stacks: [
       {
-        image:
-         "/src/components/projects/assets/excel.png",
+        image: excel,
         text: "Excel",
       },
       {
         text: "PowerBI",
-        image:"/src/components/projects/assets/powerbi.png"
-         ,
+        image: powerbi,
       },
       {
         text: "SQL(Sqlserver)",
-        image:
-          "/src/components/projects/assets/sql.png",
+        image: sql,
       },
       {
         text: "Python",
-        image:
-          "/src/components/projects/assets/python.png",
+        image: python
       },
       {
         text: "Figma",
-        image:
-          "/src/components/projects/assets/pngwing.png",
+        image: figma
       },
    
     ],
@@ -65,20 +71,20 @@ const projects = [
     
     gallery: [
       {
-        src:"/src/components/projects/assets/overview.png",
+        src:overview,
         title: "Overview",
       },
       {
-        src:"/src/components/projects/assets/conversion.png",
+        src:conversion,
         title:
           "Conversion DetailsS",
       },
       {
-       src:"/src/components/projects/assets/socilamedia.png",
+        src:socialMedia,
         title: "Social Media Details",
       },
       {
-        src:"/src/components/projects/assets/customerreview.png",
+        src:customerReview,
         title: "Customer Review Details",
       }
     ],
