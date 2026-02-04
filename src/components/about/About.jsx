@@ -2,6 +2,7 @@ import { LuDownload } from "react-icons/lu";
 import SectionHeading from "../../shared/SectionHeading";
 import AnimateComponent from "../../shared/Animation";
 import { motion } from "motion/react";
+import profile from "/src/assets/profile.jpeg";
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
       >
         <div className=" w-2/4 animate__animated animate__fadeInUp">
           <motion.img
-            src="/src/assets/profile.jpeg"
+            src={profile}
             className="w-[450px] 2xl:w-[80%] rounded-full mx-auto"
             alt=""
             initial={{ opacity: 0 }}
