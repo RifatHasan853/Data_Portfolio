@@ -1,0 +1,183 @@
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { X, Award, ChevronLeft, ChevronRight } from 'lucide-react'
+
+// Asset imports
+import Ostad from '../../../src/assets/Screenshot 2026-02-04 172000.png'
+import DataCampPython from '../../../src/assets/Screenshot 2026-02-04 171253.png'
+import DataCampSql from '../../../src/assets/Screenshot 2026-02-04 171026.png'
+
+const Achievements = () => {
+  const [selectedImg, setSelectedImg] = useState(null)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [itemsPerPage, setItemsPerPage] = useState(3)
+
+  const data = [
+    {
+      title: "Data Analysis Job Ready Program",
+      provider: "Ostad",
+      icon: <Award className="text-amber-400" size={20} />,
+      image: Ostad,
+      desc: "Successfully completed the Data Analysis Job Ready Program at Ostad, gaining hands-on experience in Advanced Excel, Power BI, and SQL. I finished all projects and tests with 97% performance, strengthening my skills to deliver actionable business insights."
+    },
+    {
+      title: "Python Data Fundamentals",
+      provider: "DataCamp",
+      icon: <Award className="text-yellow-500" size={20} />,
+      image: DataCampPython,
+      desc: "Successfully completed the Python Data Fundamentals track on DataCamp, gaining hands-on experience in Python, data manipulation with pandas, visualization with Seaborn, statistics, and exploratory data analysis, strengthening my skills to deliver actionable insights."
+    },
+    {
+      title: "Intermediate SQL",
+      provider: "DataCamp",
+      icon: <Award className="text-pink-400" size={20} />,
+      image: DataCampSql,
+      desc: "Successfully completed the Intermediate SQL course on DataCamp, gaining hands-on experience in writing complex queries, joining and aggregating data, and working with multiple tables. This course enhanced my ability to efficiently extract, analyze, and interpret data for actionable business insights."
+    }
+  ]
+
+  // Dynamic Pagination Logic based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerPage(1)
+      } else {
+        setItemsPerPage(3)
+      }
+    }
+
+    handleResize() // Initial check
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem)
+  const totalPages = Math.ceil(data.length / itemsPerPage)
+
+  // Reset to page 1 if window resize makes current page out of bounds
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1)
+    }
+  }, [totalPages, currentPage])
+
+  return (
+    <section id="achievements" className="py-14 relative overflow-hidden bg-card ">
+      {/* Background elements preserved for eye comfort */}
+      <motion.div
+        animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.2, 0.15] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-green-500/10 blur-[120px] rounded-full pointer-events-none"
+      />
+
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] brightness-50 contrast-150 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center mb-16 text-center"
+        >
+          <Award className="text-green-500 mb-4" size={28} />
+          <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter">
+            Verified <span className="text-green-500">Excellence</span>
+          </h2>
+          <div className="w-12 h-1 bg-green-500/30 mt-4 rounded-full" />
+        </motion.div>
+
+        {/* Grid Layout - Adapted for responsiveness */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 min-h-[450px]">
+          <AnimatePresence mode="wait">
+            {currentItems.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="group bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-4 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 backdrop-blur-sm"
+              >
+                <div
+                  className="relative h-56 rounded-[1.8rem] overflow-hidden cursor-pointer mb-6"
+                  onClick={() => setSelectedImg(item.image)}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+
+                <div className="px-2 pb-2">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="p-1.5 bg-white/5 rounded-lg border border-white/5">{item.icon}</div>
+                    <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">{item.provider}</p>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors leading-tight">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed font-medium opacity-80">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-6 mt-12">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 disabled:cursor-not-allowed hover:bg-green-500/20 hover:border-green-500/50 transition-all active:scale-95"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <div className="flex gap-2">
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${currentPage === i + 1 ? 'w-8 bg-green-500' : 'w-2 bg-white/20'}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 disabled:cursor-not-allowed hover:bg-green-500/20 hover:border-green-500/50 transition-all active:scale-95"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImg && (
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            <motion.button className="absolute top-6 right-6 text-white/40 hover:text-white bg-white/5 p-3 rounded-full">
+              <X size={32} />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
+              src={selectedImg} className="max-w-full max-h-[85vh] rounded-2xl border border-white/10 object-contain shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  )
+}
+
+export default Achievements

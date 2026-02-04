@@ -1,0 +1,77 @@
+import { LuDownload } from "react-icons/lu";
+import SectionHeading from "../../shared/SectionHeading";
+import AnimateComponent from "../../shared/Animation";
+import { motion } from "motion/react";
+
+const About = () => {
+  return (
+    <section className="pt-16 md:pt-24 lg:pt-32 max-w-7xl mx-auto" id="about">
+      <SectionHeading text={"About Myself"} />
+      <div
+        className="flex flex-col items-center 2xl:gap-0 gap-6 mdl:flex-row 
+         justify-center
+      w-[95%] mx-auto"
+      >
+        <div className=" w-2/4 animate__animated animate__fadeInUp">
+          <motion.img
+            src="/src/assets/WhatsApp Image 2026-01-30 at 8.13.25 AM.jpeg"
+            className="w-[450px] 2xl:w-[80%] rounded-full mx-auto"
+            alt=""
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          />
+        </div>
+        <div
+          className="space-y-4 font-Opensans text-center max-w-xl mdl:text-left
+        w-full"
+        >
+          <div>
+            <h2 className="text-2xl lg:text-3xl font-semibold font-Opensans lg:leading-10">
+              I am a{" "}
+              <span className="text-button">
+                Data & Business Analyst <span className="text-white">&</span> I turn Data into Actionable Insights
+                
+              </span>
+            </h2>
+          </div>
+          <div>
+            <p className=" text-base lg:text-lg font-normal lg:leading-8">
+             I am a Data and Business Analyst with expertise in Excel, Power BI, and SQL (MySQL, SQL Server, PostgreSQL). I help businesses turn data into actionable insights for smarter decision-making.
+
+A passionate self-learner, I continuously explore the data field to uncover trends, improve performance, and deliver meaningful business impact.
+            </p>
+          </div>
+          <div>
+            
+          </div>
+          <AnimateComponent>
+            <button
+              className="w-56 cursor-pointer cv-button 
+          overflow-hidden relative font-Opensans h-16 focus:ring-2 
+          ring-button border border-button text-lg"
+            >
+              <div
+                className="bottom-0 slide transition-right duration-500 
+            -right-full w-full h-full bg-button absolute"
+              ></div>
+              <a
+                href="/Resume_of_Shihab.pdf"
+                download="Resume_of_Shihab.pdf"
+                className="relative mr-8 text-xl font-semibold transition-all"
+              >
+                Get My Resume
+              </a>
+              <span className="fa-solid fa-download absolute right-4 px-2 py-2 bottom-1/2 rounded-full">
+                <LuDownload size={20} />
+              </span>
+            </button>
+          </AnimateComponent>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
