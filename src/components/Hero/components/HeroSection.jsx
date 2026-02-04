@@ -8,6 +8,7 @@ import cross from "../assets/cross.svg";
 import layers from "../assets/layers.svg";
 import thunder from "../assets/thunder.svg";
 import ContactDiv from "./ContactDiv";
+import heroImg from "../assets/hero.jpg";
 
 const HeroSection = () => {
   const [openContactDiv, setOpenContactDiv] = useState(false);
@@ -149,7 +150,7 @@ const HeroSection = () => {
 
         <div>
           <img
-            src="/src/components/Hero/assets/hero.jpg"
+            src={heroImg}
             className="z-40 w-[80%] md:w-[550px] floating-image "
             alt=""
           />
