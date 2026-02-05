@@ -28,10 +28,7 @@ const CaseStudy = () => {
         <h1 className="text-4xl font-bold my-4">Key Learnings</h1>
         <p className="font-medium">{project.learnings}</p>
       </section>
-      <section className="container max-w-[1280px] w-[90%] mx-auto my-12">
-        <h1 className="text-4xl font-bold my-4">Future Improvements</h1>
-        <p className="font-medium">{project.improvements}</p>
-      </section>
+     
       <Footer />
     </>
   );

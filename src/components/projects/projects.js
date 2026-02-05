@@ -1,11 +1,18 @@
 import conversion from "./assets/conversion.png";
 import customerReview from "./assets/customerreview.png";
 import excel from "./assets/excel.png";
-import powerbi from "./assets/powerbi.png";
-import sql from "./assets/sql.png";
-import python from "./assets/python.png";
 import figma from "./assets/pngwing.png";
+import powerbi from "./assets/powerbi.png";
+import python from "./assets/python.png";
+import sql from "./assets/sql.png";
 
+import blinkittitle from "./assets/Blinkit/Blinkit_Home.png";
+import home from "./assets/Blinkit/Blinkit_Overview.png";
+import blinkit_3 from "./assets/Blinkit/Blinkit_customer.png";
+import blinkit_4 from "./assets/Blinkit/Blinkit_feedbacks.png";
+import blinkit_5 from "./assets/Blinkit/Blinkit_inventory.png";
+import blinkit_6 from "./assets/Blinkit/Blinkit_marketing.png";
+import blinkit_7 from "./assets/Blinkit/Blinkit_sales_overview.png";
 import overview from "./assets/overview.png";
 import socialMedia from "./assets/socilamedia.png";
 
@@ -96,141 +103,112 @@ const projects = [
   {
     case: "2",
     title: "UrbanEats",
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1740934039/portfolio/etbjdwnldh67lha4dv2p.jpg",
-    link: "https://urbaneats-72385.web.app/",
-    github: "https://github.com/shihabhq/urbaneats",
-    titleImg:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1741497218/urbaneats/bj0nv2q5qmggtiore6lg.jpg",
-    tagline: "A Platform to Buy, Sell, and Manage Delicious Experiences.",
-    text: "UrbanEats is a multilevel Restaurant store management web application where users can purchase their necessary delicious foods and also sellers can sell their prepared foods. users can add orders and update their foods via this application. Also, The design is unique and built with great attention. To know more Click the case study button below",
+    image: home,
+    link: "https://app.powerbi.com/groups/me/reports/ef041f19-6708-42f3-a626-7e0a67161dc0/5014db5ecc65cb01751a?experience=power-bi",
+    github:"https://www.linkedin.com/feed/update/urn:li:activity:7413426389338521600/",
+    titleImg: blinkittitle,
+    tagline: "Blinkit Quick-Commerce Analysis",
+    text: "Blinkit is a quick-commerce platform where operational efficiency and real-time insights are critical. This project focuses on building an interactive Power BI dashboard to analyze deliveries, sales, inventory, marketing performance, and customer behavior in a centralized view.",
     stacks: [
       {
-        text: "JavaScript",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740930103/portfolio/elvkxssthlbadqlgw4r6.svg",
+        text: "Excel",
+        image:excel,
       },
       {
-        text: "TailwindCSS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740930461/portfolio/ruvxlmoqoohotter530t.svg",
+        text: "PowerBI",
+        image: powerbi,
       },
       {
-        text: "React",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929822/portfolio/tqefwmnan7wrq1nyzpbg.svg",
+        text: "Sql(Mysql)",
+        image: sql,
       },
       {
-        text: "Router",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740931452/portfolio/iap37xwaafm4ywws2nqw.svg",
-      },
-      {
-        text: "Firebase",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/yiurfwklddlitackfwqt.svg",
-      },
-      {
-        text: "NodeJS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/pnr3cycovxym6sx3nmuf.svg",
-      },
-      {
-        text: "ExpressJS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/svtv77hzyg6pyt9agpm9.svg",
-      },
-      {
-        text: "MongoDB",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/i8qmy6ztj7mbhyvb3340.svg",
-      },
-      {
-        text: "JWT",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/zzyw11vl83sp0vvd6lt9.svg",
-      },
-
-      {
-        text: "Axios",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/l6hlysjru26w4xq4f7ba.svg",
-      },
+        text: "Figma",
+        image: figma,
+      }
     ],
     colorcodes: ["#bf9444", "#0f142a"],
-    approaches: [
-      {
-        problem:
-          "User authentication was required for using all the features and routing accross every page(including public and private pages)",
-        solution:
-          "I used firebase authentication and onAuthStateChanged function to manage authentication. Also, for security I implemented JWT token authorization.",
-      },
-      {
-        problem:
-          "Different components used the same server link for data fetching. For this I had to write the same server link accross every component. Which was repetitive.",
-        solution:
-          "I created a hook named useAxios() and this hook provided an axiosInstance. This one mitigated the necessary of writing repetitive server link. Also, this axiosInstance maintained the 401 and 403 authorization security.",
-      },
-      {
-        problem:
-          "When User wants to add a food item then he/she needs to upload the image. Implementing image upload functionality was a challenge as I had to ensure image upload to a service provider and paste the image url in the database. Also, faster image loading was required.",
-        solution:
-          "To solve this I chose cloudinary. I created two functions handleImageChange() and uploadImage() to handle this. The handleImageChange() function checks the file type and saves it in a state and the uploadImage() function uploads the image to cloudinary and returns the secure_url of the image which I save in the database.",
-      },
-      {
-        problem:
-          "Implementing the dark mode was a challenge. As the whole application has huge number of elements and components. changing their style using the dark: tailwind class was a hassle.",
-        solution:
-          "I used a tailwindCSS library called daisyUI to implement this. I created a Theme Provider that changed the data-theme of the document using useEffect(). It also saved the theme data inside localStorage for future theme preference.",
-      },
-      {
-        problem:
-          "The gallery page needed some interactive images in a simple format.",
-        solution:
-          "I have implemented yet-another-react-lightbox library in this page for this functionality.",
-      },
-    ],
+   approaches : [
+  {
+    problem:
+      "Handling a large volume of operational, sales, inventory, and customer data from multiple sources made analysis slow and unstructured.",
+    solution:
+      "I used Power Query to clean, transform, and optimize the dataset. I removed unnecessary columns, standardized data types, and designed a star schema data model to improve performance and scalability.",
+  },
+  {
+    problem:
+      "Displaying complex KPIs like delivery completion rate, average order value, and customer retention in a way that non-technical stakeholders could easily understand was challenging.",
+    solution:
+      "I created custom DAX measures and visualized them using KPI cards, gauge charts, and donut charts to clearly represent performance metrics and trends.",
+  },
+  {
+    problem:
+      "Stakeholders needed to analyze performance by time, region, and product category without switching between multiple dashboards.",
+    solution:
+      "I implemented slicers, drill-down, and drill-through functionality to enable dynamic filtering and deeper data exploration within a single dashboard.",
+  },
+  {
+    problem:
+      "Identifying delivery delays and operational bottlenecks was difficult using raw data alone.",
+    solution:
+      "I built line charts and completion rate visuals to track delivery trends over time, helping identify peak delay periods and logistics inefficiencies.",
+  },
+  {
+    problem:
+      "Customer feedback data was unstructured and difficult to analyze for actionable insights.",
+    solution:
+      "I categorized feedback into positive, neutral, and negative sentiment and visualized recurring keywords using a word cloud to quickly highlight customer pain points.",
+  },
+  {
+    problem:
+      "Monitoring inventory levels manually increased the risk of stockouts and overstocking.",
+    solution:
+      "I created stock level charts, inventory turnover KPIs, and low-stock alert visuals using conditional formatting to support proactive inventory management.",
+  },
+  {
+    problem:
+      "Comparing marketing spend and ROI across different campaigns and regions was not straightforward.",
+    solution:
+      "I designed campaign ROI and acquisition channel visuals using bar and funnel charts, allowing clear comparison of marketing performance and budget effectiveness.",
+  },
+],
+
     gallery: [
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519758/urbaneats/new%20gallery/sktg3zbx4am702wwk6hw.png",
-        title: "Light mode of the UI",
+        src: blinkittitle,
+        title: "Home",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519760/urbaneats/new%20gallery/o7ulx62q9ncae17rwwqw.png",
-        title: "Dark mode UI",
+        src: home,
+        title: "Overview",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519760/urbaneats/new%20gallery/axa7gjarr6kt6hsqq9pt.png",
-        title: "login and register system that uses firebase authentication",
+        src: blinkit_7,
+        title: "Sales Overview",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519761/urbaneats/new%20gallery/xttlhqrabmag6e3dviil.png",
-        title: "Gallery page where the react lightbox library was implemented",
+        src: blinkit_3,
+        title: "Customer",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741520696/urbaneats/new%20gallery/tun8wvtqrzn8l6xlhany.png",
-        title: "Good looking Footer and Navbar",
+        src: blinkit_4,
+        title: "Feedbacks",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519758/urbaneats/new%20gallery/sktg3zbx4am702wwk6hw.png",
+        src: blinkit_5,
         title:
-          "Added Foods page that shows the added foods by the user in a table format",
+          "Inventory",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519756/urbaneats/new%20gallery/psfvdsblup13hyqzm4hv.png",
+        src: blinkit_6,
         title:
-          "Ordered Foods of the user are shown in this Order Foods private page.",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741519754/urbaneats/new%20gallery/w8yzj7vtwm6oc7lpdnuq.png",
-        title:
-          "Add foods page where I have implemented the Cloudinary image upload function.",
-      },
+          "marketing",
+      }
+        
     ],
     learnings:
-      "This project has taught me Firebase authentication, JWT authorization, Image upload via a third party service provider and more. It also increased my knowledge and enhanced my capabilities in JavaScript, React and Tailwind. I had a tremendous confidence boost after building this project. I believe this learnings will help me in my further self taught developer journey.",
-    improvements:
-      "Several improvements can be made in this project. first of all, TailwindCSS got upgraded to a latest v4 and this project can be migrated to that version. I could've used the lazy loading and more performance optimization systems of React.In the backend, I only used MongoDB native codes whereas using mongoose could've increased the readability of code and enhanced developer experience. As I know Typescript, I can use TS in this project to increase type safety.",
+      "Through the Blinkit Power BI Dashboard project, I learned how to transform large, complex datasets into clear, actionable insights. I gained hands-on experience in data modeling, creating interactive visualizations, and building custom DAX measures for key performance indicators like revenue, customer retention, and delivery performance. The project also taught me how to design user-friendly dashboards with dynamic filtering and drill-down capabilities, enabling stakeholders to make data-driven decisions efficiently.",
+    
   },
   {
     case: "3",
