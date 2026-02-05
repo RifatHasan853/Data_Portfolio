@@ -64,7 +64,7 @@ const Achievements = () => {
   }, [totalPages, currentPage])
 
   return (
-    <section id="achievements" className="py-14 relative overflow-hidden bg-card ">
+    <section id="certificate" className="py-14 relative overflow-hidden bg-card ">
       {/* Background elements preserved for eye comfort */}
       <motion.div
         animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.2, 0.15] }}

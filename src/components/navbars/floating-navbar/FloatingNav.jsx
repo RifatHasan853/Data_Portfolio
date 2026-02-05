@@ -26,7 +26,7 @@ const FloatingNav = () => {
       <FloatingNavBtn href="#about" text="About" />
       <FloatingNavBtn href="#projects" text="Projects" />
       <FloatingNavBtn href="#skills" text="Skills" />
-      <FloatingNavBtn href="#writings" text="writings" />
+      <FloatingNavBtn href="#certificate" text="Certificates" />
       <a
         href="/Resume_of_Shihab.pdf"
         download="Resume_of_Shihab.pdf"

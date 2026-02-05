@@ -1,12 +1,43 @@
 import AnimateComponent from "../../shared/Animation";
 import SectionHeading from "../../shared/SectionHeading";
 import SkillsCard from "./components/SkillsCard";
+import excel from "../projects/assets/excel.png";
+import powerbi from "../projects/assets/powerbi.png";
+import sql from "../projects/assets/sql.png";
+import python from "../projects/assets/python.png";
+import figma from "../projects/assets/pngwing.png"
 const skills = [
+   {
+    image:
+      excel,
+    name: "Excel",
+  },
   {
+    image:
+      powerbi,
+    name: "Power BI",
+  },
+    {
+    image:
+      sql,
+    name: "SQL",
+  },
+    {
+    image:
+      python,
+    name: "Python",
+  },
+    {
+    image:
+      figma,
+    name: "Figma",
+  },
+   {
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740986067/portfolio/rkaqclndmrjaeftdlp5a.svg",
     name: "HTML",
   },
+  
   {
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740986058/portfolio/hetlmcpjiecfvkcistsd.svg",
@@ -23,27 +54,15 @@ const skills = [
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740930103/portfolio/elvkxssthlbadqlgw4r6.svg",
     name: "JavaScript",
   },
-  {
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1741010435/portfolio/kgqkvfgckbngqqmsnzdl.svg",
-    name: "TypeScript",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1741010859/portfolio/mgw9zi1cw84esjigjsd5.svg",
-    name: "Sass",
-  },
+  
+  
 
   {
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740929822/portfolio/tqefwmnan7wrq1nyzpbg.svg",
     name: "React",
   },
-  {
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1742088762/portfolio/prztnf6idejyykxvfx2y.svg",
-    name: "Redux",
-  },
+  
   {
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/pnr3cycovxym6sx3nmuf.svg",
@@ -56,21 +75,13 @@ const skills = [
     name: "ExpressJS",
   },
 
-  {
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/yiurfwklddlitackfwqt.svg",
-    name: "Firebase",
-  },
+  
   {
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/i8qmy6ztj7mbhyvb3340.svg",
     name: "MongoDB",
   },
-  {
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/lfcsfnfsoqwk2x19bhzx.svg",
-    name: "Mongoose",
-  },
+ 
 
   {
     image:
@@ -81,7 +92,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="pt-16 md:pt-24 lg:pt-32">
+    <section id="skills" className="pt-20 md:pt-24 lg:pt-32">
       <SectionHeading text={"My Skills"} />
 
       <div

@@ -14,7 +14,7 @@ const HeroNav = () => {
         <HeroNavBtn href={"about"} text={"About"} idx={1} />
         <HeroNavBtn href={"projects"} text={"Projects"} idx={2} />
         <HeroNavBtn href={"skills"} text={"Skills"} idx={3} />
-        <HeroNavBtn href={"writings"} text={"writings"} idx={4} />
+        <HeroNavBtn href={"certificate"} text={"Certificates"} idx={4} />
         <a
           href="/Resume_of_Shihab.pdf"
           download="Resume_of_Shihab.pdf"

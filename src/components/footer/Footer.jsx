@@ -26,11 +26,11 @@ const Footer = () => {
   return (
     <section className="">
       <div className="flex mb-8 items-center justify-center gap-6 flex-wrap">
-        <IconLink link={"https://www.linkedin.com/in/adnansaim"}>
+        <IconLink link={"https://www.linkedin.com/in/rifat-hasan-4851a5392"}>
           <FaLinkedinIn size={36} />
         </IconLink>
       
-        <IconLink link={"https://github.com/shihabhq"}>
+        <IconLink link={"https://github.com/RifatHasan853"}>
           <AiFillGithub size={36} />
         </IconLink>
         
@@ -42,7 +42,7 @@ const Footer = () => {
         <h1 className="text-center text-lg text-white font-Opensans font-light">
           Designed and Developed by{" "}
           <a
-            href="https://www.linkedin.com/in/adnansaim"
+            href="https://www.linkedin.com/in/rifat-hasan-4851a5392"
             target="_blank"
             className="underline hover:text-button transition-all duration-200"
           >

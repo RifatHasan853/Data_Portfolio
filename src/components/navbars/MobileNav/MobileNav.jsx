@@ -29,8 +29,8 @@ const MobileNav = () => {
       />
       <MobileNavBtn
         toggleSidebar={toggleSidebar}
-        href={"writings"}
-        text={"writings"}
+        href={"certificate"}
+        text={"Certificates"}
       />
       <button
         onClick={toggleSidebar}

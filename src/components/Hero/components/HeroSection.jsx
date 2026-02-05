@@ -136,7 +136,7 @@ const HeroSection = () => {
               </a>
 
               <a
-                href="https://github.com/shihabhq"
+                href="https://github.com/RifatHasan853"
                 target="_blank"
                 className=""
               >

@@ -16,6 +16,17 @@ import blinkit_7 from "./assets/Blinkit/Blinkit_sales_overview.png";
 import overview from "./assets/overview.png";
 import socialMedia from "./assets/socilamedia.png";
 
+import hospitaltitle from "./assets/Hospital/overview.png";
+import hospitalhome from "./assets/Hospital/Home.png";
+
+
+import hospitaldoctor from "./assets/Hospital/doctor.png";
+import hos_patient from "./assets/Hospital/patient.png";
+import hos_hosptal from "./assets/Hospital/hospital.png";
+import hos_finance from "./assets/Hospital/finance.png";
+
+
+
 const projects = [
   {
     case: "1",
@@ -212,210 +223,100 @@ const projects = [
   },
   {
     case: "3",
-    title: "WorkFlowr",
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1740980740/portfolio/mhurwsauum5vq3apuamj.png",
-    text: "A kanban-UI based drag and drop Todo application that solves a simple problem which is managing tasks. the kanban board is divided into 3 columns, Todo, Ongoing and Done. Drag and Drop can be done in both direction vertically and horizontally. It is a full stack application built with MERN stack technologies with user authentication and data persistence feature.",
-    link: "https://workflowrr.netlify.app/",
-    github: "https://github.com/shihabhq/workflowrr",
-    tagline: "A Kanban UI-based Drag and Drop productivity management app",
-    titleImg:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1741527769/workflowr/les4jdtjw2eq26j3jv2b.png",
+    title: "Hospital Management Dashboard",
+    image:hospitaltitle,
+    text:"This Hospital Management Dashboard project uses Power BI to transform healthcare data from MySQL and Excel into meaningful, decision-ready insights. It features interactive dashboards for hospital performance, operations, doctors, patients, finance, and staff management. By leveraging Power Query, data modeling, and DAX, I focused on creating clean, intuitive visuals that simplify complex data and support real-world healthcare decision-making.",
+    link: "https://app.powerbi.com/groups/me/reports/aa2fdfa2-cc7d-44b6-b4a0-521115f7c1e9/811877e6736d215bc177?experience=power-bi",
+    github: "https://www.linkedin.com/feed/update/urn:li:activity:7413130312576065537/",
+    tagline: "Turning hospital data into actionable insights for smarter healthcare decisions.",
+    titleImg: hospitalhome,
     stacks: [
       {
-        text: "JavaScript",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740930103/portfolio/elvkxssthlbadqlgw4r6.svg",
+        text: "Excel",
+        image:excel,
       },
       {
-        text: "TailwindCSS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740930461/portfolio/ruvxlmoqoohotter530t.svg",
+        text: "PowerBI",
+        image:powerbi,
       },
       {
-        text: "ReactJS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929822/portfolio/tqefwmnan7wrq1nyzpbg.svg",
+        text: "Sql(Mysql)",
+        image:sql
       },
       {
-        text: "Router",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740931452/portfolio/iap37xwaafm4ywws2nqw.svg",
-      },
-
-      { text: "dnd-kit", image: "https://dndkit.com/dnd-kit-logo.svg" },
-      {
-        text: "NodeJS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/pnr3cycovxym6sx3nmuf.svg",
-      },
-      {
-        text: "Firebase",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/yiurfwklddlitackfwqt.svg",
-      },
-      {
-        text: "ExpressJS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/svtv77hzyg6pyt9agpm9.svg",
-      },
-      {
-        text: "MongoDB",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/i8qmy6ztj7mbhyvb3340.svg",
-      },
-      {
-        text: "Axios",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/l6hlysjru26w4xq4f7ba.svg",
-      },
-      {
-        text: "Mongoose",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/lfcsfnfsoqwk2x19bhzx.svg",
-      },
+        text: "Figma",
+        image:figma,
+      }
     ],
     colorcodes: ["#17a2b8", "#f9aa49", "#1487be", "#1fc678"],
     approaches: [
-      {
-        problem:
-          "As each different user has different tasks to save, User authentication was required to get into the application.",
-        solution:
-          "I used the firebase authentication with React's PrivateRoute component combined with loading component to implement this.",
-      },
-      {
-        problem:
-          "Through the documentation and some youtube video, I could easily write the code of a single column vertically task drag and drop functionality. But The main and most painfull challenge was to implement the horizontal drag and drop system through columns. The main problem was that, the task object specifically was added in a column by checking the 'column' property of that task object. Each 'column' property of a task was fixed to that particular Column. If I drag horizontally, the fixed 'column' property name didn't make it switch tasks from one columen to another column.",
-        solution:
-          "I have watched countless tutorials and read a huge amount of documentation and finally found a solution to this problem. I created a handleDragOver() function of dnd-kit/core that check for the column name difference while dragging. If the column name was different from the initial column, this function changes the column's name. this ensured the horizontal drag and drop functionality. ",
-      },
-      {
-        problem:
-          "Data persistency is a challenge. As client can change the state of task by dragging and dropping them in various ways. It is a challenge to maintain this and persist the data in the database in this exact location.",
-        solution:
-          "There is no easy solution in JavaScript just like arrayMove() in dnd-kit. For large scale application I could've made my own arrayMove() function and sent the changed data in MongoDB but as it is just a small project, I can just send the whole array of tasks data in the database and that is completely fine for this. If you open the network tab you can see that in each drag and drop a network request is sent in the database to save this current data.",
-      },
-    ],
+  {
+    problem:
+      "Hospital data was coming from multiple sources like MySQL databases and Excel files, which made analysis difficult due to inconsistent formats and structures.",
+    solution:
+      "I used Power Query in Power BI to clean, transform, and standardize the data. This included removing duplicates, handling missing values, normalizing fields, and reshaping tables to make them analysis-ready."
+  },
+  {
+    problem:
+      "Raw data alone didn’t provide meaningful insights, and it was difficult to understand hospital performance at a glance.",
+    solution:
+      "I designed multiple dashboards focused on specific business perspectives such as hospital performance overview, operations, doctor insights, patient analysis, financial performance, and staff management to break down complexity into actionable views."
+  },
+  {
+    problem:
+      "Establishing accurate relationships between different datasets (patients, doctors, departments, finance, staff) was critical but challenging.",
+    solution:
+      "I implemented a proper data model using fact and dimension tables and created relationships carefully to ensure accurate filtering, cross-highlighting, and KPI calculations across dashboards."
+  },
+  {
+    problem:
+      "Key performance indicators like patient count, revenue trends, doctor efficiency, and operational metrics were not directly available in the raw data.",
+    solution:
+      "I wrote custom DAX measures to calculate KPIs, trends, ratios, and aggregated metrics that support data-driven decision-making in a healthcare context."
+  },
+  {
+    problem:
+      "Presenting complex healthcare data in a way that is easy for non-technical users to understand was a major challenge.",
+    solution:
+      "I focused on clean and interactive dashboard design using proper visual hierarchy, slicers, tooltips, and consistent color themes. I also used Figma to plan layouts before implementing them in Power BI."
+  },
+  {
+    problem:
+      "Understanding what questions to ask from the data was as challenging as building the dashboards themselves.",
+    solution:
+      "Through this project, I practiced analytical thinking by identifying business questions first and then building visuals and metrics that directly answer those questions instead of just showing data."
+  }
+
+],
     gallery: [
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741527550/workflowr/wg1zebjgt4j4cnn6hzq3.png",
+        src: hospitalhome,
         title: "Home Page",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542643/workflowr/n59ufk3wn9rgkf1halky.png",
-        title: "Blank Kanban board without any task",
+        src: hospitaltitle,
+        title: "Overview",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542565/workflowr/xr7qwz8cetflh67qqbsd.png",
-        title: "Adding a new Task functionality through a modal.",
+        src: hos_patient,
+        title: "Patient Info",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542566/workflowr/jyezhwqe5iin9efdr5xy.png",
-        title: "Direct editing functionality through clicking the task title.",
+        src: hospitaldoctor,
+        title: "Doctor Info",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542566/workflowr/r7spviehygwaqn2kv4xt.png",
-        title: "Login Page",
+        src: hos_hosptal,
+        title: "Hospital Info",
       },
       {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542565/workflowr/balry2i45ytvcclt2465.png",
-        title: "Register Page",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542565/workflowr/iyco5hpuopb3slx77i7v.png",
-        title: "While Dragging a task from one column to another.",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741542565/workflowr/mncalpuzkarjmzqkqzmp.png",
-        title: "Loading Spinner of the app",
-      },
+        src: hos_finance,
+        title: "Finance Info",
+      }
     ],
     learnings:
-      "It is one of my best small projects. I really enjoyed a lot while building this. This Project not just has enhanced my MERN stack skills with tailwind UI building but taught me how to dive deep and implement something from reading documentation of a package. Initially, the dnd-kit was a hassle for me to implement and it generated a huge frustation. But I remained calm and steady to build this.",
-    improvements:
-      "Currently in the project, There are fixed amount of columns(only 3). Future improvements can be adding the functionality to increase the column count dynamically. I could've improved the UI and implemented dark mode using Tailwind. Also, data persistency is not that much secured. JWT authorization can be added over here. Lastly, This project chould have a better data persistency method instead of the whole array saving. But for a small project like this, it is completely fine.",
+      "This project helped me understand how raw data from multiple sources can be transformed into structured, reliable datasets using Power Query and proper data modeling. I learned how to create meaningful KPIs with DAX and how well-designed dashboards can turn complex healthcare data into clear, actionable insights. More importantly, the project strengthened my analytical thinking by teaching me to start with the right business questions and present insights in a simple, user-friendly way for decision-makers.",
   },
-  {
-    case: "4",
-    title: "ColorZapp",
-    text: "ColorZapp is a web-based color-generating application built with HTML, CSS, and JavaScript. In this app, users can generate a random color by clicking 'Generate Color', the color will be displayed in the box below the button. Additionally, the User can copy that color's RGB and HEX code. The red, green, and blue toggles are for adjusting the color. This app also has a dark mode option.This was the final project of my CS50 course. Through this, I got my CS50 certificate.",
-    image:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1740985833/portfolio/o007nzbrevlezgh0tzfk.png",
-    link: "https://colorzapp.netlify.app/",
-    titleImg:
-      "https://res.cloudinary.com/deyzzky20/image/upload/v1741548647/colorzapp/qtsemmyzzknmh1eyiykr.png",
-    github: "",
-    tagline:
-      "A color-generating web-based application that gives different format of color codes with copying functionality.",
-    stacks: [
-      {
-        text: "HTML",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740986067/portfolio/rkaqclndmrjaeftdlp5a.svg",
-      },
-      {
-        text: "CSS",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740986058/portfolio/hetlmcpjiecfvkcistsd.svg",
-      },
-      {
-        text: "JavaScript",
-        image:
-          "https://res.cloudinary.com/deyzzky20/image/upload/v1740930103/portfolio/elvkxssthlbadqlgw4r6.svg",
-      },
-    ],
-    colorcodes: ["#08cc70", "#ff2323", "#30cb30", "#2caeff", "#121212"],
-    approaches: [
-      {
-        problem: "Generating a random color was a challenge",
-        solution:
-          "I used JavaScript's Math.random() function to create 3 different value between 0 to 255. then I dynamically changed the css of the box using rgb color code.",
-      },
-      {
-        problem:
-          "From RGB to HEX code color transform functionality was needed.",
-        solution:
-          "On the left side of the app, there are two input fields. One is for RGB and another is for HEX. These two fields will give the RGB and HEX values of the generated color.Toggling each input field will change the corresponding another field's value accordingly as I have implemented isRGBValid, isHexValid and event listeners to change values realtime. Also, I have used CSS absolute property and a copy icon from the fontawesome website to add the copy function from these inputs. There is a CSS animation is used to assure the user that the color code has been copied.",
-      },
-      {
-        problem:
-          "Toggleing RGB range inputs should change the box's color accordingly.",
-        solution:
-          "I used JavaScript dom manipulation to implement this functionality.",
-      },
-      {
-        problem: "I had to implement dark mode in the app",
-        solution:
-          "this app is not created by using any framework or library. I used vanilla JavaScript's dom manipulation and localStorage's data persistency to save the background state and change the background color of the app accordingly.",
-      },
-    ],
-    gallery: [
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741549348/colorzapp/gt0ngpmajmptnok27lrj.jpg",
-        title: "My CS50X certificate",
-      },
-
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548647/colorzapp/a48zjcysjjczq13qspmk.png",
-        title: "The application UI",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548648/colorzapp/huebuz5x8megfbubwfnv.png",
-        title: "Dark mode of the UI",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548647/colorzapp/vscqzwcpdtcyj1njojgm.png",
-        title: "RGB to HEX color change and copy functionality",
-      },
-      {
-        src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548647/colorzapp/qtsemmyzzknmh1eyiykr.png",
-        title: "Generate Color functionality",
-      },
-    ],
-    learnings:
-      "This was my CS50 final project. I submitted this one and got my CS50X certificate. It was very hard and took a lot time to complete this course but it gave me an overview of the whole computer science world. I really enjoyed each of the lectures and tasks of this course and it ensured my commitment and consistency in the tech world.",
-    improvements:
-      "This project was created using just HTML, CSS and JavaScript. I am now profiecient enough to write code in TypeScript and React and these modern web technologies can be used to build this type of small apps. Also, I could've used MongoDB and firebase authentication over here. As, I got my CS50 certificate through only JavaScript, I can say that it was a success.",
-  },
+ 
 ];
 export default projects;
