@@ -58,8 +58,8 @@ A passionate self-learner, I continuously explore the data field to uncover tren
             -right-full w-full h-full bg-button absolute"
               ></div>
               <a
-                href="/Resume_of_Shihab.pdf"
-                download="Resume_of_Shihab.pdf"
+                href="/Resume_of_Rifat.pdf"
+                download="Resume_of_Rifat.pdf"
                 className="relative mr-8 text-xl font-semibold transition-all"
               >
                 Get My Resume

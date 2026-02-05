@@ -16,8 +16,8 @@ const HeroNav = () => {
         <HeroNavBtn href={"skills"} text={"Skills"} idx={3} />
         <HeroNavBtn href={"certificate"} text={"Certificates"} idx={4} />
         <a
-          href="/Resume_of_Shihab.pdf"
-          download="Resume_of_Shihab.pdf"
+          href="/Resume_of_Rifat.pdf"
+          download="Resume_of_Rifat.pdf"
           className="nav-button bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-50 hover:text-background cursor-pointer"
         >
           Resume
