@@ -16,14 +16,14 @@ import blinkit_7 from "./assets/Blinkit/Blinkit_sales_overview.png";
 import overview from "./assets/overview.png";
 import socialMedia from "./assets/socilamedia.png";
 
-import hospitaltitle from "./assets/Hospital/overview.png";
 import hospitalhome from "./assets/Hospital/Home.png";
+import hospitaltitle from "./assets/Hospital/overview.png";
 
 
 import hospitaldoctor from "./assets/Hospital/doctor.png";
-import hos_patient from "./assets/Hospital/patient.png";
-import hos_hosptal from "./assets/Hospital/hospital.png";
 import hos_finance from "./assets/Hospital/finance.png";
+import hos_hosptal from "./assets/Hospital/hospital.png";
+import hos_patient from "./assets/Hospital/patient.png";
 
 
 
@@ -113,7 +113,7 @@ const projects = [
   },
   {
     case: "2",
-    title: "UrbanEats",
+    title: "Blinkit Power BI Dashboard",
     image: home,
     link: "https://app.powerbi.com/groups/me/reports/ef041f19-6708-42f3-a626-7e0a67161dc0/5014db5ecc65cb01751a?experience=power-bi",
     github:"https://www.linkedin.com/feed/update/urn:li:activity:7413426389338521600/",
