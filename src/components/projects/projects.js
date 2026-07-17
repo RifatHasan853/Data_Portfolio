@@ -25,7 +25,7 @@ import hos_finance from "./assets/Hospital/finance.png";
 import hos_hosptal from "./assets/Hospital/hospital.png";
 import hos_patient from "./assets/Hospital/patient.png";
 
-
+import sales_das from "./assets/Seles_Dashboard.png";
 
 const projects = [
   {
@@ -317,6 +317,77 @@ const projects = [
     learnings:
       "This project helped me understand how raw data from multiple sources can be transformed into structured, reliable datasets using Power Query and proper data modeling. I learned how to create meaningful KPIs with DAX and how well-designed dashboards can turn complex healthcare data into clear, actionable insights. More importantly, the project strengthened my analytical thinking by teaching me to start with the right business questions and present insights in a simple, user-friendly way for decision-makers.",
   },
+  {
+  case: "4",
+  title: "Sales Performance Dashboard",
+  image: sales_das,
+  text: "This Sales Performance Dashboard project was built entirely in Microsoft Excel to transform raw retail sales data into interactive business insights. The dashboard provides a comprehensive overview of sales performance, customer behavior, product performance, and regional trends using Pivot Tables, Pivot Charts, slicers, and advanced Excel formulas. It enables users to monitor key business metrics and make data-driven decisions through an intuitive and visually appealing interface.",
+
+  link: "https://1drv.ms/x/c/608646973a633772/IQAHUyldoUBYQIOJJmalXblTAd3vo__rEe5ugTHcWAwyQfs?e=73ayWM",
+  github: "YOUR_LINKEDIN_POST",
+
+  tagline: "Interactive Excel dashboard for tracking sales performance and business growth.",
+
+  titleImg: sales_das,
+
+  stacks: [
+    {
+      text: "Microsoft Excel",
+      image: excel,
+    }
+  ],
+
+  colorcodes: ["#217346", "#F9AA49", "#1487BE", "#1FC678"],
+
+  approaches: [
+    {
+      problem:
+        "The raw sales dataset contained thousands of transaction records, making it difficult to identify business trends manually.",
+      solution:
+        "I cleaned and organized the dataset using Excel, ensuring consistent formatting and preparing it for efficient analysis."
+    },
+    {
+      problem:
+        "Management needed a quick overview of key business metrics without reviewing large datasets.",
+      solution:
+        "I designed KPI cards displaying Total Units Sold, Overall Sales Revenue, Average Revenue per Customer, and Average Revenue per Product for an instant performance snapshot."
+    },
+    {
+      problem:
+        "Comparing sales performance across different periods and customer segments was time-consuming.",
+      solution:
+        "I created Pivot Tables and Pivot Charts to visualize Year-over-Year revenue (2023 vs 2024), monthly revenue trends, and weekday versus weekend sales."
+    },
+    {
+      problem:
+        "Understanding which products, categories, and customers generated the highest revenue required detailed analysis.",
+      solution:
+        "I built visual reports showing revenue by category, top-selling products, Top-5 revenue-generating customers, gender-wise revenue contribution, and age-segment analysis."
+    },
+    {
+      problem:
+        "Business leaders wanted to monitor regional sales performance across multiple markets.",
+      solution:
+        "I developed regional performance charts displaying revenue distribution across East, North, South, and West regions for quick comparison."
+    },
+    {
+      problem:
+        "Users needed an interactive dashboard that allowed them to explore data without modifying the dataset.",
+      solution:
+        "I implemented slicers for Product Category and Region, enabling dynamic filtering across all charts while maintaining a clean and user-friendly dashboard."
+    }
+  ],
+
+  gallery: [
+    {
+      src: sales_das,
+      title: "Sales Performance Dashboard",
+    }
+  ],
+
+  learnings:
+    "This project strengthened my Excel dashboard development skills by applying Pivot Tables, Pivot Charts, slicers, formulas, and conditional formatting to build an interactive reporting solution. I learned how to transform raw sales data into meaningful business insights, design executive-level dashboards, and present complex information in a clear and visually engaging way for decision-makers."
+}
  
 ];
 export default projects;
